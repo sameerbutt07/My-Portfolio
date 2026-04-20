@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My Portfolio | Web Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="Portfolio.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Dev<span>.</span></div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">✦ Available for Internships</div>
+    <h1 class="hero-name">
+      Sameer Ahmad
+      <span class="highlight">Web Developer</span>
+    </h1>
+    <p class="hero-role">
+      <span class="typing" id="typing-text"></span>
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="/Images/Profile.jpeg" alt="Your Name" style="width:100%; border-radius:16px; position:relative; z-index:1;"/>
+      </div>
+      <div class="about-info reveal" style="transition-delay:0.15s">
+        <p class="section-label">— About Me</p>
+        <h2 class="section-title">Passionate about building <em>web experiences</em></h2>
+        <p>I'm a BSCS student and aspiring web developer from Multan, Pakistan with a strong foundation in modern web technologies. I love crafting clean, responsive, and user-friendly interfaces that solve real-world problems.</p>
+        <p>Currently pursuing my degree while building real projects to sharpen my skills and grow as a developer every single day.</p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Years Coding</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-wrap">
+    <p class="section-label reveal">— My Skills</p>
+    <h2 class="section-title reveal">Technologies I <em>work with</em></h2>
+    <p class="section-sub reveal">From markup to interactivity — here's my current tech stack and proficiency levels.</p>
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-skill="100">
+        <div class="skill-icon">🌐</div>
+        <div class="skill-name">HTML5</div>
+        <div class="skill-desc">Semantic markup, accessibility, SEO-friendly structure</div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+        <div class="skill-pct">100%</div>
+      </div>
+      <div class="skill-card reveal" data-skill="85" style="transition-delay:0.08s">
+        <div class="skill-icon">🎨</div>
+        <div class="skill-name">CSS3</div>
+        <div class="skill-desc">Flexbox, Grid, animations, responsive design</div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+        <div class="skill-pct">85%</div>
+      </div>
+      <div class="skill-card reveal" data-skill="85" style="transition-delay:0.16s">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-desc">ES6+, DOM manipulation, async/await, APIs</div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+        <div class="skill-pct">85%</div>
+      </div>
+      <div class="skill-card reveal" data-skill="85" style="transition-delay:0.08s">
+        <div class="skill-icon">🅱</div>
+        <div class="skill-name">Bootstrap</div>
+        <div class="skill-desc">Responsive grid system, UI components, utilities</div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+        <div class="skill-pct">85%</div>
+      </div>
+      <div class="skill-card reveal" data-skill="70" style="transition-delay:0.16s">
+        <div class="skill-icon">⚛️</div>
+        <div class="skill-name">React.js</div>
+        <div class="skill-desc">Components, hooks, state management, routing</div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+        <div class="skill-pct">70%</div>
+      </div>
+      <div class="skill-card reveal" data-skill="70" style="transition-delay:0.24s">
+        <div class="skill-icon">🔧</div>
+        <div class="skill-name">Git & GitHub</div>
+        <div class="skill-desc">Version control, collaboration, open source</div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+        <div class="skill-pct">70%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-wrap">
+    <p class="section-label reveal">— Education</p>
+    <h2 class="section-title reveal">My <em>Academic</em> Journey</h2>
+    <p class="section-sub reveal">Building a solid foundation through formal education and continuous self-learning.</p>
+    <div class="edu-timeline">
+      <div class="edu-item reveal">
+        <div class="edu-card">
+          <div class="edu-period">2024 — PRESENT</div>
+          <div class="edu-degree">BS Computer Science</div>
+          <div class="edu-school">Virtual University of Pakistan</div>
+          <div class="edu-desc">Studying core CS fundamentals including data structures, algorithms, databases, operating systems, and software engineering. Actively working on web development projects alongside coursework.</div>
+        </div>
+      </div>
+       <div class="edu-item reveal" style="transition-delay:0.1s">
+        <div class="edu-card">
+          <div class="edu-period">2022 — 2024</div>
+          <div class="edu-degree">Diploma in Civil Draftsman</div>
+          <div class="edu-school">Government Techinal Trainning Institute</div>
+          <div class="edu-desc">To develop practical skills in preparing accurate civil engineering drawings, plans, and layouts using drafting techniques and software, enabling effective support for construction and infrastructure projects</div>
+        </div>
+      </div>
+      <div class="edu-item reveal" style="transition-delay:0.1s">
+        <div class="edu-card">
+          <div class="edu-period">2021 — 2023</div>
+          <div class="edu-degree">Intermediate (FSC)</div>
+          <div class="edu-school">Your College Name</div>
+          <div class="edu-desc">To build a strong foundation in mathematics, physics, and analytical thinking, preparing students for higher studies and careers in engineering and related technical fields.</div>
+        </div>
+      </div>
+      <div class="edu-item reveal" style="transition-delay:0.2s">
+        <div class="edu-card">
+          <div class="edu-period">2018 — 2020</div>
+          <div class="edu-degree">Matriculation</div>
+          <div class="edu-school">Misali Science Secondary School System</div>
+          <div class="edu-desc">Completed secondary school education with a focus on science subjects. Achieved excellent grades and developed a keen interest in technology.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-wrap">
+    <p class="section-label reveal">— Projects</p>
+    <h2 class="section-title reveal">Things I've <em>Built</em></h2>
+    <p class="section-sub reveal">A selection of projects that showcase my skills in web development.</p>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <div class="project-thumb-icon">🛒</div>
+          <div class="project-tag-wrap">
+            <span class="tag">React</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">E-Commerce Website</div>
+          <div class="project-desc">A fully responsive online store with product listing, cart functionality, and a clean checkout UI built with React and Bootstrap.</div>
+          <div class="project-links">
+            <a href="#">↗ Live Demo</a>
+            <a href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal" style="transition-delay:0.1s">
+        <div class="project-thumb">
+          <div class="project-thumb-icon">📋</div>
+          <div class="project-tag-wrap">
+            <span class="tag">JS</span>
+            <span class="tag">CSS3</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Task Manager App</div>
+          <div class="project-desc">A sleek to-do app with drag-and-drop, local storage persistence, categories, and priority levels. Built with vanilla JavaScript.</div>
+          <div class="project-links">
+            <a href="#">↗ Live Demo</a>
+            <a href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal" style="transition-delay:0.2s">
+        <div class="project-thumb">
+          <div class="project-thumb-icon">🌦</div>
+          <div class="project-tag-wrap">
+            <span class="tag">API</span>
+            <span class="tag">HTML/CSS/JS</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Weather Dashboard</div>
+          <div class="project-desc">Real-time weather app using OpenWeather API. Shows 5-day forecast, wind speed, humidity, and weather icons for any city worldwide.</div>
+          <div class="project-links">
+            <a href="#">↗ Live Demo</a>
+            <a href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-wrap">
+    <p class="section-label reveal">— Contact</p>
+    <h2 class="section-title reveal">Let's <em>Work Together</em></h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p>Have a project in mind or looking for a passionate developer? I'd love to hear from you. Let's build something great together!</p>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-detail">
+            <span>Email</span>
+            <strong>sameeerbutt896@gmail.com</strong>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-detail">
+            <span>Location</span>
+            <strong>Multan, Pakistan</strong>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-detail">
+            <span>GitHub</span>
+            <strong>github.com/sameerbutt07</strong>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🔗</div>
+          <div class="contact-detail">
+            <span>LinkedIn</span>
+            <strong>linkedin.com/in/sameer-ahmad</strong>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal" style="transition-delay:0.15s">
+        <div class="form-row">
+          <div class="form-group">
+            <label>FIRST NAME</label>
+            <input type="text" id="fname" placeholder="John" />
+          </div>
+          <div class="form-group">
+            <label>LAST NAME</label>
+            <input type="text" id="lname" placeholder="Doe" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>EMAIL ADDRESS</label>
+          <input type="email" id="email" placeholder="john@example.com" />
+        </div>
+        <div class="form-group">
+          <label>SUBJECT</label>
+          <input type="text" id="subject" placeholder="Project Enquiry" />
+        </div>
+        <div class="form-group">
+          <label>MESSAGE</label>
+          <textarea id="message" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <div class="form-success" id="form-success">✅ Thanks! I'll get back to you soon.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Designed & Built with ❤️ by <span>Sameer Ahmad</span> · © 2025</p>
+</footer>
+
+<script src="Portfolio.js"></script>
+</body>
+</html>
