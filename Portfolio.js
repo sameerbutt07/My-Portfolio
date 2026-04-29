@@ -53,7 +53,7 @@ function drawBg() {
 drawBg();
 
 /* ── TYPING ── */
-const roles = ['HTML, CSS & JAVASCRIPT Developer', 'React Developer', 'Bootstrap Expert', 'BSCS Student', 'Problem Solver'];
+const roles = ['HTML, CSS & JS Developer', 'React Developer', 'Bootstrap Expert', 'BSCS Student', 'Problem Solver'];
 let ri = 0, ci = 0, deleting = false;
 function type() {
   const el = document.getElementById('typing-text');
@@ -101,15 +101,46 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 });
 
 /* ── CONTACT FORM ── */
-function submitForm() {
-  const fname = document.getElementById('fname').value.trim();
-  const email = document.getElementById('email').value.trim();
+async function submitForm() {
+  const fname   = document.getElementById('fname').value.trim();
+  const lname   = document.getElementById('lname').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
   const message = document.getElementById('message').value.trim();
+
   if (!fname || !email || !message) {
-    alert('Please fill in all required fields.');
+    alert('Please fill in Name, Email and Message.');
     return;
   }
-  document.getElementById('form-success').style.display = 'block';
-  ['fname','lname','email','subject','message'].forEach(id => document.getElementById(id).value = '');
-  setTimeout(() => document.getElementById('form-success').style.display = 'none', 4000);
+
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  try {
+    const response = await fetch('http://localhost:3000/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fname, lname, email, subject, message })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      document.getElementById('form-success').style.display = 'block';
+      ['fname','lname','email','subject','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      setTimeout(() => {
+        document.getElementById('form-success').style.display = 'none';
+      }, 4000);
+    } else {
+      alert('Error: ' + result.error);
+    }
+  } catch (err) {
+    alert('Could not connect to server. Make sure server.js is running.');
+  }
+
+  btn.textContent = 'Send Message →';
+  btn.disabled = false;
 }
